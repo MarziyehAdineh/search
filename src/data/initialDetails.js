@@ -1,14 +1,14 @@
 const initialDetails = [
     {
       id: 1,
-      name: "مرضیه آدینه",
-      email: "📧MarziyehAdineh1@gmail.com",
-      address: "🏠دهلران, ایران",
+      name: " جاوید آذرپیکان",
+      email: "📧javidAzarpeykan@gmail.com",
+      address: "قم, ایران",
     },
     {
       id: 2,
-      name: "منصور نورانی",
-      email: "📧MansurNurani@gmail.com",
+      name: "علی امیدی",
+      email: "📧AliOmidi@gmail.com",
       address: "🏠تهران, ایران",
     },
    
