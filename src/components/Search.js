@@ -2,14 +2,15 @@ import React, { useState } from "react";
 
 import SearchList from "./SearchList";
 function NormalizeStr(str) {
-  return str.replace("آ", "ا").replace("ی", "ي").toLowerCase().trim();
+  return str.replace("آ", "ا").replace(/[\u0649]/g, 'ي').replace(/[\u0629]/g, 'ه').toLowerCase().trim();
 }
 function Search({ details }) {
   const [searchField, setSearchField] = useState("");
   const filteredPersons = details.filter((person) => {
     return (
       NormalizeStr(person.name).includes(NormalizeStr(searchField)) ||
-      person.email.toLowerCase().includes(searchField.toLowerCase())
+      NormalizeStr(person.email).includes(NormalizeStr(searchField))||
+      NormalizeStr(person.address).includes(NormalizeStr(searchField))
     );
   });
 
