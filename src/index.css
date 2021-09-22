@@ -5,6 +5,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+img {
+  border-radius: 50%;
+}
 @font-face {
   font-family: 'IranSans';
   src: url(fonts/font.woff2) format('woff2');
