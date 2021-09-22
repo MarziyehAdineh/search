@@ -14,7 +14,7 @@ function Card({ person }) {
       }}
     >
       <p >
-        <h1 style={{ margin: "0 auto", fontSize:"15px" }}>{person.name}</h1>
+        <h1 style={{ margin: "0 auto", fontSize:"16px" }}>{person.name}</h1>
         <p>{person.email}</p>
         <p>{person.address}</p>
       </p>
