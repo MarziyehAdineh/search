@@ -14,21 +14,21 @@ const initialDetails = [
       image:"https://profile.ut.ac.ir/image/edu/teacher?img_id=96934891&t=1632220833014"
     },
     {
-      id: 2,
+      id: 3,
       name: "سعید باجلان ",
       email: "📧saeedbajalan@ut.ac.ir",
       address: "رشت, ایران",
       image:"https://profile.ut.ac.ir/image/edu/teacher?img_id=83956930&t=1632223070205"
     },
     {
-      id: 3,
+      id: 4,
       name: "زهرا شاطرزاده یزدی ",
       email: "📧zahrashaterzadeh@ut.ac.ir",
       address: "یزد, ایران",
       image:"https://profile.ut.ac.ir/image/edu/teacher?img_id=84424723&t=1632223280156"
     },
     {
-      id: 4,
+      id: 5,
       name: "بیژن نامدارزنگنه ",
       email: "📧Bijanenamdarzangeneh@ut.ac.ir",
       address: "تهران, ایران",
