@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-
+// import '../styles.css';
 import SearchList from "./SearchList";
 function NormalizeStr(str) {
-  return str.replace("آ", "ا").replace(/[\u0649]/g, 'ي').replace(/[\u0629]/g, 'ه').toLowerCase().trim();
+  return str.replace("آ", "ا")
+  .replace(/[\u0629]/g, 'ه')
+  .replace("ي","ی")
+  .replace("ئ","ی")
+  .toLowerCase().trim();
 }
-function Search({ details }) {
+function TopSearchComponent({ details }) {
   const [searchField, setSearchField] = useState("");
   const filteredPersons = details.filter((person) => {
+  const sp=NormalizeStr(searchField).split(' ');
     return (
-      NormalizeStr(person.name).includes(NormalizeStr(searchField)) ||
-      NormalizeStr(person.email).includes(NormalizeStr(searchField))||
-      NormalizeStr(person.address).includes(NormalizeStr(searchField))
+      sp.every(a=>NormalizeStr(person.name+" "+person.email+" "+person.address).includes(a))
     );
   });
 
@@ -35,7 +38,7 @@ function Search({ details }) {
           </h2>
         </div>
         <div className="pa2">
-          <input
+          <input 
             style={{fontFamily:"IranSans",direction:"rtl",width:"250px"}}
             className="pa3 bb br3 grow b--none bg-lightest-blue ma3"
             type="search"
@@ -52,4 +55,4 @@ function Search({ details }) {
   );
 }
 
-export default Search;
+export default TopSearchComponent;
